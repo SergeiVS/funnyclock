@@ -1,4 +1,5 @@
 import React from 'react';
+import Clock from "./clock";
 
 function App() {
   return (
@@ -7,6 +8,7 @@ function App() {
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
+        <Clock size={400} timeFormat="standard" hourFormat="roman" />
       </header>
     </div>
   );
