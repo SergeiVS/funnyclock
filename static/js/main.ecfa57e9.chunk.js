@@ -1,0 +1,2 @@
+(this.webpackJsonpfunnyclock=this.webpackJsonpfunnyclock||[]).push([[0],{3:function(e,t,n){e.exports=n(8)},8:function(e,t,n){"use strict";n.r(t);var a=n(0),c=n.n(a),r=n(2);var l=function(){return c.a.createElement("div",{className:"App"},c.a.createElement("header",{className:"App-header"},c.a.createElement("p",null,"Edit ",c.a.createElement("code",null,"src/App.tsx")," and save to reload.")))};n.n(r).a.render(c.a.createElement(c.a.StrictMode,null,c.a.createElement(l,null)),document.getElementById("root"))}},[[3,1,2]]]);
+//# sourceMappingURL=main.ecfa57e9.chunk.js.map
