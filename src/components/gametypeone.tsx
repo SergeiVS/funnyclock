@@ -47,9 +47,9 @@ export default class GameTypeOneComponent extends React.Component<any, IState>
 
     private newTask()
     {
-        let hours = Math.floor(Math.random() * 24) + 1;
-        let minutes = Math.floor(Math.random() * 59) + 1;
-        let seconds = Math.floor(Math.random() * 59) + 1;
+        let hours = Math.floor(Math.random() * 24);
+        let minutes = Math.floor(Math.random() * 59);
+        let seconds = Math.floor(Math.random() * 59);
         let tasks : Task[] = [];
         let rightIndex = Math.floor(Math.random() * 3);
         for (let i = 0; i < this.state.count; i++)
@@ -68,7 +68,7 @@ export default class GameTypeOneComponent extends React.Component<any, IState>
             else 
             {
                 let date = new Date();
-                date.setHours(Math.floor(Math.random() * 24) + 1, Math.floor(Math.random() * 59) + 1, Math.floor(Math.random() * 59) + 1);
+                date.setHours(Math.floor(Math.random() * 24), Math.floor(Math.random() * 59), Math.floor(Math.random() * 59));
                 let task : Task = 
                 {
                     right: false,
