@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "cee418c6ecd64de288ea38c5c47d3edf",
+    "revision": "0b71b8f42c93734bbeb31701c57a93ab",
     "url": "/funnyclock/index.html"
   },
   {
-    "revision": "4406feac362b741e317e",
+    "revision": "3c0f8ce2a2026237387d",
     "url": "/funnyclock/static/css/2.de424728.chunk.css"
   },
   {
-    "revision": "4406feac362b741e317e",
-    "url": "/funnyclock/static/js/2.9cac0b89.chunk.js"
+    "revision": "3c0f8ce2a2026237387d",
+    "url": "/funnyclock/static/js/2.71b4526a.chunk.js"
   },
   {
     "revision": "6141096c4ac566a5af04071688ff208d",
-    "url": "/funnyclock/static/js/2.9cac0b89.chunk.js.LICENSE.txt"
+    "url": "/funnyclock/static/js/2.71b4526a.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "03724579073235c9c20f",
-    "url": "/funnyclock/static/js/main.8ca94f34.chunk.js"
+    "revision": "fa3639e95b1db738136d",
+    "url": "/funnyclock/static/js/main.421766f2.chunk.js"
   },
   {
     "revision": "a146c3b89c5a50f6c46d",

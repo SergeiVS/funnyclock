@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.js": "/funnyclock/static/js/main.8ca94f34.chunk.js",
-    "main.js.map": "/funnyclock/static/js/main.8ca94f34.chunk.js.map",
+    "main.js": "/funnyclock/static/js/main.421766f2.chunk.js",
+    "main.js.map": "/funnyclock/static/js/main.421766f2.chunk.js.map",
     "runtime-main.js": "/funnyclock/static/js/runtime-main.b4b8583c.js",
     "runtime-main.js.map": "/funnyclock/static/js/runtime-main.b4b8583c.js.map",
     "static/css/2.de424728.chunk.css": "/funnyclock/static/css/2.de424728.chunk.css",
-    "static/js/2.9cac0b89.chunk.js": "/funnyclock/static/js/2.9cac0b89.chunk.js",
-    "static/js/2.9cac0b89.chunk.js.map": "/funnyclock/static/js/2.9cac0b89.chunk.js.map",
+    "static/js/2.71b4526a.chunk.js": "/funnyclock/static/js/2.71b4526a.chunk.js",
+    "static/js/2.71b4526a.chunk.js.map": "/funnyclock/static/js/2.71b4526a.chunk.js.map",
     "index.html": "/funnyclock/index.html",
-    "precache-manifest.b171dbf5b52f808fe9236fe2b85d2933.js": "/funnyclock/precache-manifest.b171dbf5b52f808fe9236fe2b85d2933.js",
+    "precache-manifest.288fe2bf5b18c6033b71f936ecdda7f3.js": "/funnyclock/precache-manifest.288fe2bf5b18c6033b71f936ecdda7f3.js",
     "service-worker.js": "/funnyclock/service-worker.js",
     "static/css/2.de424728.chunk.css.map": "/funnyclock/static/css/2.de424728.chunk.css.map",
-    "static/js/2.9cac0b89.chunk.js.LICENSE.txt": "/funnyclock/static/js/2.9cac0b89.chunk.js.LICENSE.txt"
+    "static/js/2.71b4526a.chunk.js.LICENSE.txt": "/funnyclock/static/js/2.71b4526a.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.b4b8583c.js",
     "static/css/2.de424728.chunk.css",
-    "static/js/2.9cac0b89.chunk.js",
-    "static/js/main.8ca94f34.chunk.js"
+    "static/js/2.71b4526a.chunk.js",
+    "static/js/main.421766f2.chunk.js"
   ]
 }
