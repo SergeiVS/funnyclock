@@ -2,9 +2,21 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/App';
 
+import "bootstrap/dist/js/bootstrap.min.js";
+import "bootswatch/dist/sketchy/bootstrap.min.css";
+import "font-awesome/css/font-awesome.min.css";
+
+const Particles = require("particlesjs");
+
+window.onload = function() {
+    Particles.init({
+      selector: '.background',
+      connectParticles: true,
+      maxParticles: 100
+    });
+  };
+
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+    <App />,
+    document.getElementById('root')
 );
