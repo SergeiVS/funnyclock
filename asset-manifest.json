@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/funnyclock/static/js/main.3089fe55.chunk.js",
-    "main.js.map": "/funnyclock/static/js/main.3089fe55.chunk.js.map",
+    "main.js": "/funnyclock/static/js/main.59b75de8.chunk.js",
+    "main.js.map": "/funnyclock/static/js/main.59b75de8.chunk.js.map",
     "runtime-main.js": "/funnyclock/static/js/runtime-main.b4b8583c.js",
     "runtime-main.js.map": "/funnyclock/static/js/runtime-main.b4b8583c.js.map",
     "static/js/2.40b1cdb8.chunk.js": "/funnyclock/static/js/2.40b1cdb8.chunk.js",
     "static/js/2.40b1cdb8.chunk.js.map": "/funnyclock/static/js/2.40b1cdb8.chunk.js.map",
     "index.html": "/funnyclock/index.html",
-    "precache-manifest.b22303243cd213f3208327b5ca7fc15f.js": "/funnyclock/precache-manifest.b22303243cd213f3208327b5ca7fc15f.js",
+    "precache-manifest.32e65fd0abeac2fe57321a6b2910e239.js": "/funnyclock/precache-manifest.32e65fd0abeac2fe57321a6b2910e239.js",
     "service-worker.js": "/funnyclock/service-worker.js",
     "static/js/2.40b1cdb8.chunk.js.LICENSE.txt": "/funnyclock/static/js/2.40b1cdb8.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.b4b8583c.js",
     "static/js/2.40b1cdb8.chunk.js",
-    "static/js/main.3089fe55.chunk.js"
+    "static/js/main.59b75de8.chunk.js"
   ]
 }
