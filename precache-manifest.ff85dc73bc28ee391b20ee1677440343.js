@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a806f8922c0fc9588f5dc11a2e39ef64",
+    "revision": "b5d8509bb2871906e97e7e9ad8cb6258",
     "url": "/funnyclock/index.html"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/funnyclock/static/js/2.025bf34c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "16cf51f3fe91e322fe51",
-    "url": "/funnyclock/static/js/main.a3266b27.chunk.js"
+    "revision": "4272721fffdc2164fbe9",
+    "url": "/funnyclock/static/js/main.ce9aa4fa.chunk.js"
   },
   {
     "revision": "a146c3b89c5a50f6c46d",
