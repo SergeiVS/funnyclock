@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.js": "/funnyclock/static/js/main.ce9aa4fa.chunk.js",
-    "main.js.map": "/funnyclock/static/js/main.ce9aa4fa.chunk.js.map",
+    "main.js": "/funnyclock/static/js/main.c76adc56.chunk.js",
+    "main.js.map": "/funnyclock/static/js/main.c76adc56.chunk.js.map",
     "runtime-main.js": "/funnyclock/static/js/runtime-main.b4b8583c.js",
     "runtime-main.js.map": "/funnyclock/static/js/runtime-main.b4b8583c.js.map",
     "static/css/2.3f32cfe5.chunk.css": "/funnyclock/static/css/2.3f32cfe5.chunk.css",
-    "static/js/2.025bf34c.chunk.js": "/funnyclock/static/js/2.025bf34c.chunk.js",
-    "static/js/2.025bf34c.chunk.js.map": "/funnyclock/static/js/2.025bf34c.chunk.js.map",
+    "static/js/2.725c49dc.chunk.js": "/funnyclock/static/js/2.725c49dc.chunk.js",
+    "static/js/2.725c49dc.chunk.js.map": "/funnyclock/static/js/2.725c49dc.chunk.js.map",
     "index.html": "/funnyclock/index.html",
-    "precache-manifest.ff85dc73bc28ee391b20ee1677440343.js": "/funnyclock/precache-manifest.ff85dc73bc28ee391b20ee1677440343.js",
+    "precache-manifest.9e9bb293bb95ddbcb62917414368a4e0.js": "/funnyclock/precache-manifest.9e9bb293bb95ddbcb62917414368a4e0.js",
     "service-worker.js": "/funnyclock/service-worker.js",
     "static/css/2.3f32cfe5.chunk.css.map": "/funnyclock/static/css/2.3f32cfe5.chunk.css.map",
-    "static/js/2.025bf34c.chunk.js.LICENSE.txt": "/funnyclock/static/js/2.025bf34c.chunk.js.LICENSE.txt",
+    "static/js/2.725c49dc.chunk.js.LICENSE.txt": "/funnyclock/static/js/2.725c49dc.chunk.js.LICENSE.txt",
     "static/media/font-awesome.min.css": "/funnyclock/static/media/fontawesome-webfont.fee66e71.woff"
   },
   "entrypoints": [
     "static/js/runtime-main.b4b8583c.js",
     "static/css/2.3f32cfe5.chunk.css",
-    "static/js/2.025bf34c.chunk.js",
-    "static/js/main.ce9aa4fa.chunk.js"
+    "static/js/2.725c49dc.chunk.js",
+    "static/js/main.c76adc56.chunk.js"
   ]
 }
