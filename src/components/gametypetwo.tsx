@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Button, Card, Row, Col, Alert, Tooltip, OverlayTrigger, Modal } from "react-bootstrap";
+import { Container, Button, Card, Row, Col, Alert, Tooltip, OverlayTrigger, Modal, ToggleButton, ToggleButtonGroup } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
 
 import Clock from "./clock";
@@ -10,7 +10,8 @@ interface IState
     time: Date,
     success: boolean,
     error: boolean,
-    help: boolean
+    help: boolean,
+    en: boolean
 }
 
 interface Task 
@@ -38,6 +39,22 @@ export default class GameTypeTwoComponent extends React.Component<any, IState>
         "десять",
         "одиннадцать",
         "двенадцать"
+    ]
+
+    private readonly hours_en : string [] = 
+    [
+        "one",
+        "two",
+        "three",
+        "four",
+        "five",
+        "six",
+        "seven",
+        "eight",
+        "nine",
+        "ten",
+        "eleven",
+        "twelve"
     ]
 
     private readonly hours_ru_rod : string [] = 
@@ -71,16 +88,38 @@ export default class GameTypeTwoComponent extends React.Component<any, IState>
         "Без пяти "
     ] 
 
+    private readonly minutes_en : string [] = 
+    [
+        "Five past ",
+        "Ten past ",
+        "Quarter past ",
+        "Twenty past ",
+        "Twenty-five past ",
+        "Half past ",
+        "Twenty-five to ",
+        "Twenty to ",
+        "Quarter to ",
+        "Ten to ",
+        "Five to "
+    ]
+
     public readonly state: Readonly<IState> = 
     {
         tasks: [],
         time: new Date(),
         success: false,
         error: false,
-        help: false
+        help: false,
+        en: false
     }
 
-    private generateTitleFromTime(hours: number, minutes: number) : string
+    constructor(props: any)
+    {
+        super(props);
+        this.OnLanguageChange = this.OnLanguageChange.bind(this);
+    }
+
+    private generateTitleFromTime(hours: number, minutes: number, en: boolean) : string
     {
         if (hours >= 12) hours -= 12;
         let title = "";
@@ -89,22 +128,38 @@ export default class GameTypeTwoComponent extends React.Component<any, IState>
             if (hours == 0) 
                 hours = 11;
             else hours -= 1;
-            title += this.hours_ru[hours] + " ровно";
+            if (en) 
+                title += this.hours_en[hours] + " o'clock";
+            else title += this.hours_ru[hours] + " ровно";
             title = title.replace(title[0], title[0].toUpperCase());
         }
         else if (minutes == 30)
         {
-            title += this.minutes_ru[5] + this.hours_ru_rod[hours];
+            if (en)
+            {
+                if (hours == 0) 
+                    hours = 11;
+                else hours --;
+                title += this.minutes_en[5] + this.hours_en[hours];
+            }
+            else title += this.minutes_ru[5] + this.hours_ru_rod[hours];
         }
         else if (minutes < 30)
         {
             let index = minutes / 5 - 1;
-            title += this.minutes_ru[index] + this.hours_ru_rod[hours];
+            if (en)
+            {
+                if (hours == 0) 
+                    hours = 11;
+                else hours --;
+                title += this.minutes_en[index] + this.hours_en[hours];
+            }
+            else title += this.minutes_ru[index] + this.hours_ru_rod[hours];
         }
         else 
         {
             let index = minutes / 5 - 1;
-            title += this.minutes_ru[index] + this.hours_ru[hours];
+            title += en ? this.minutes_en[index] + this.hours_en[hours] : this.minutes_ru[index] + this.hours_ru[hours];
         }
         return title;
     }
@@ -123,7 +178,7 @@ export default class GameTypeTwoComponent extends React.Component<any, IState>
                 let task : Task = 
                 {
                     right: true,
-                    title: this.generateTitleFromTime(hours, minutes),
+                    title: this.generateTitleFromTime(hours, minutes, this.state.en),
                     minutes: minutes,
                     hours: hours
                 }
@@ -131,12 +186,18 @@ export default class GameTypeTwoComponent extends React.Component<any, IState>
             }
             else 
             {
-                let hours2 = Math.floor(Math.random() * 24);
-                let minutes2 = Math.round(Math.floor(Math.random() * 55) / 5) * 5;
+                let hours2 = 0;
+                let minutes2 = 0;
+                do 
+                {
+                    hours2 = Math.floor(Math.random() * 24);
+                    minutes2 = Math.round(Math.floor(Math.random() * 55) / 5) * 5;
+                }
+                while (hours2 == hours && minutes2 == minutes);
                 let task : Task = 
                 {
                     right: false,
-                    title: this.generateTitleFromTime(hours2, minutes2),
+                    title: this.generateTitleFromTime(hours2, minutes2, this.state.en),
                     hours: hours2,
                     minutes: minutes2
                 }
@@ -179,6 +240,19 @@ export default class GameTypeTwoComponent extends React.Component<any, IState>
         }
     }
 
+    private OnLanguageChange(value: boolean)
+    {
+        this.setState({ en: value }, () => 
+        {
+            let tasks = this.state.tasks;
+            tasks.forEach(task => 
+            {
+                task.title = this.generateTitleFromTime(task.hours, task.minutes, value);
+            })
+            this.setState({ tasks: tasks })
+        });
+    }
+
     public render()
     {
         return (
@@ -187,6 +261,14 @@ export default class GameTypeTwoComponent extends React.Component<any, IState>
                     <Col xs={12}>
                         <Card>
                             <Card.Body>
+                                <Row>
+                                    <Col xs={12} className="d-flex flex-column justify-content-center align-items-center">
+                                        <ToggleButtonGroup type="radio" name="lang" defaultValue={false} onChange={ this.OnLanguageChange }>
+                                            <ToggleButton value={false}>Русский</ToggleButton>
+                                            <ToggleButton value={true}>English</ToggleButton>
+                                        </ToggleButtonGroup>
+                                    </Col>
+                                </Row>
                                 <Row>
                                     <Col xs={12} className="d-flex flex-column justify-content-center align-items-center">
                                         <Clock size={300} isActive={false} time={ this.state.time } showSeconds={false}/>
