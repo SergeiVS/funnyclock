@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "bf9d8d1bc02995ebdb2d6f2c25ecd1cc",
+    "revision": "d2a9109a0d3c5ce9a53239a8461f727d",
     "url": "/funnyclock/index.html"
   },
   {
-    "revision": "ba27477113436be67b72",
-    "url": "/funnyclock/static/css/2.3f32cfe5.chunk.css"
+    "revision": "f86aced7c91c7fe4eeac",
+    "url": "/funnyclock/static/css/2.5f0676c6.chunk.css"
   },
   {
-    "revision": "ba27477113436be67b72",
-    "url": "/funnyclock/static/js/2.725c49dc.chunk.js"
+    "revision": "f86aced7c91c7fe4eeac",
+    "url": "/funnyclock/static/js/2.14ccb5b4.chunk.js"
   },
   {
     "revision": "7d1a11e946ac1eb843d48553fc739275",
-    "url": "/funnyclock/static/js/2.725c49dc.chunk.js.LICENSE.txt"
+    "url": "/funnyclock/static/js/2.14ccb5b4.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "4bc06bd22de58223ae11",
-    "url": "/funnyclock/static/js/main.c76adc56.chunk.js"
+    "revision": "8a38439a06a0081be982",
+    "url": "/funnyclock/static/js/main.ccc7abb3.chunk.js"
   },
   {
     "revision": "a146c3b89c5a50f6c46d",
