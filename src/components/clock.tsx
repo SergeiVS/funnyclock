@@ -11,7 +11,8 @@ interface IProps
     timeFormat: string,
     hourFormat: string,
     time: Date,
-    isActive: boolean
+    isActive: boolean,
+    showSeconds: boolean
 }
 
 export default class Clock extends React.Component<IProps, IState>
@@ -32,7 +33,8 @@ export default class Clock extends React.Component<IProps, IState>
     {
         timeFormat: "24hour",
         hourFormat: "standard",
-        isActive: true
+        isActive: true,
+        showSeconds: true
     };
     
     constructor(props: IProps) 
@@ -168,8 +170,11 @@ export default class Clock extends React.Component<IProps, IState>
         this.drawHand(ctx, hour, radius * 0.5, radius * 0.05);
         minute = (minute * Math.PI / 30) + (second * Math.PI / (30 * 60));
         this.drawHand(ctx, minute, radius * 0.8, radius * 0.05);
-        second = (second * Math.PI / 30);
-        this.drawHand(ctx, second, radius * 0.9, radius * 0.02, "red");
+        if (this.props.showSeconds)
+        {
+            second = (second * Math.PI / 30);
+            this.drawHand(ctx, second, radius * 0.9, radius * 0.02, "red");
+        }
     }
  
     private drawHand(ctx: any, position: number, length: number, width: number, color: string = "black") 

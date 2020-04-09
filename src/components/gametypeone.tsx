@@ -12,7 +12,6 @@ interface IState
 {
     hours: number,
     minutes: number,
-    seconds: number,
     tasks: Task[],
     count: number,
     success: boolean,
@@ -27,7 +26,6 @@ export default class GameTypeOneComponent extends React.Component<any, IState>
     {
         hours: 0,
         minutes: 0,
-        seconds: 0,
         tasks: [], 
         count: 3,
         success: false,
@@ -49,7 +47,6 @@ export default class GameTypeOneComponent extends React.Component<any, IState>
     {
         let hours = Math.floor(Math.random() * 24);
         let minutes = Math.floor(Math.random() * 59);
-        let seconds = Math.floor(Math.random() * 59);
         let tasks : Task[] = [];
         let rightIndex = Math.floor(Math.random() * 3);
         for (let i = 0; i < this.state.count; i++)
@@ -57,7 +54,7 @@ export default class GameTypeOneComponent extends React.Component<any, IState>
             if (i == rightIndex) 
             {
                 let date = new Date();
-                date.setHours(hours, minutes, seconds);
+                date.setHours(hours, minutes, 0);
                 let task : Task = 
                 {
                     right: true,
@@ -68,7 +65,7 @@ export default class GameTypeOneComponent extends React.Component<any, IState>
             else 
             {
                 let date = new Date();
-                date.setHours(Math.floor(Math.random() * 24), Math.floor(Math.random() * 59), Math.floor(Math.random() * 59));
+                date.setHours(Math.floor(Math.random() * 24), Math.floor(Math.random() * 59), 0);
                 let task : Task = 
                 {
                     right: false,
@@ -79,7 +76,6 @@ export default class GameTypeOneComponent extends React.Component<any, IState>
             this.setState({
                 hours: hours,
                 minutes: minutes,
-                seconds: seconds,
                 tasks: tasks
             });
         }
@@ -115,7 +111,7 @@ export default class GameTypeOneComponent extends React.Component<any, IState>
                                 { this.state.tasks.map((task, index) => 
                                 (
                                     <Col xs={4} className="d-flex flex-column justify-content-center align-items-center" key={index}>
-                                        <Clock size={ 200 } time={ task.date } isActive={ false }/>
+                                        <Clock size={ 200 } time={ task.date } isActive={ false } showSeconds={ false } />
                                         <Button variant="outline-primary" onClick={ () => this.answer(task.right)}>Выбрать</Button>
                                     </Col>
                                 )) }
@@ -133,8 +129,6 @@ export default class GameTypeOneComponent extends React.Component<any, IState>
                                                 (this.state.hours > 9 ? this.state.hours.toString() : "0" + this.state.hours.toString())
                                                 + ":" + 
                                                 (this.state.minutes > 9 ? this.state.minutes.toString() : "0" + this.state.minutes.toString())
-                                                + ":" + 
-                                                (this.state.seconds > 9 ? this.state.seconds.toString() : "0" + this.state.seconds.toString())
                                             }
                                         </h1>
                                     </Col>
@@ -171,7 +165,7 @@ export default class GameTypeOneComponent extends React.Component<any, IState>
                         <div>
                             <p className="text-center">Привет!</p>
                             <p className="text-center">Здесь ты можешь потренироваться определять время на часах.</p>
-                            <p className="text-center">В центре рабоченго окна указано время в цифровом формате (часы:минуты:секунды). Сверху представлены три циферблата, но только на одном из них время такое же, как и указано в цифровом виде. Попробуй определить этот циферблат и нажми на кнопку "Выбрать" под ним.</p>
+                            <p className="text-center">В центре рабоченго окна указано время в цифровом формате (часы:минуты). Сверху представлены три циферблата, но только на одном из них время такое же, как и указано в цифровом виде. Попробуй определить этот циферблат и нажми на кнопку "Выбрать" под ним.</p>
                             <p className="text-center">Если затрудняешься с ответом, нажми на кнопку "Сброс", и тогда появится новое время.</p>
                             <p className="text-center">Удачи!</p>
                         </div>
